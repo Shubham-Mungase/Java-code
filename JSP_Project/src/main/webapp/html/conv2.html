@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="../jsp/conv2.jsp" method="get" >
+
+enter a string <input type="text" name="txfno" >
+
+uppercase <input type="radio" name="rd" value="upper" onclick="conv(this.form)"  >
+lowercase <input  type="radio" name="rd"  value="lower" onclick="conv(this.form)" >
+
+
+</form>
+
+<script type="text/javascript">
+
+function conv(form1) {
+	form1.submit();
+}
+</script>
+
+</body>
+</html>

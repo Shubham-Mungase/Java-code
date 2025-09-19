@@ -1,0 +1,47 @@
+import java.io.*;
+class EvenExp1 extends Exception
+{
+	int a;
+	EvenExp1(int x)
+	{
+		a=x;
+	}
+	public String toString()
+	{
+		return("No is even i.e="+a);
+	}
+}
+class EvenExp
+{
+	public static void main(String args[])
+	{
+		int p;
+		try
+		{
+			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Enter Number : ");
+			p=Integer.parseInt(br.readLine());
+			if(p%2==0)
+			{
+				throw new EvenExp1(p);
+			}
+			else
+			{
+				System.out.println("Number is odd");
+			}	
+		}
+		catch(IOException e)
+		{
+			System.out.println("Exp="+e);
+		}
+		catch(NumberFormatException e)
+		{
+			System.out.println("Exp="+e);
+		}
+		catch(EvenExp1 e)
+		{
+			System.out.println("Exp="+e);
+		}
+		
+	}
+}

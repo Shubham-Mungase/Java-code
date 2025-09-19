@@ -1,0 +1,20 @@
+
+class Stringbufferdemo
+{
+	public static void main(String args[]) 
+	{
+		String str="wel come";
+		StringBuffer sb = new StringBuffer(str);
+		System.out.println("length of string : "+sb.length());
+		System.out.println("capacity of string : "+sb.capacity());
+		sb.setLength(30);
+		System.out.println("capacity of string : "+sb.capacity());
+		System.out.println("After Append of new string : "+sb.append("to java"));
+		sb.setCharAt(5,'u');
+		System.out.println("Now string : "+sb.toString());
+		System.out.println("Set char: "+sb.charAt(4));
+		System.out.println("After Insert: "+sb.insert(4,"bye"));
+		System.out.println("After Replace: "+sb.replace(3,6,"now learn java"));
+		System.out.println("Set char: "+sb.charAt(4));		
+	}	
+}
